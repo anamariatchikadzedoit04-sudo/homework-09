@@ -1,0 +1,67 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dbeafe;
+}
+
+.ghost {
+  width: 400px;
+  height: 480px;
+  background: #fff;
+  border-radius: 200px 200px 0 0;
+  position: relative;
+  animation: float 1s ease-in-out infinite alternate;
+}
+
+.face {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding-top: 100px;
+}
+
+.eye {
+  width: 40px;
+  height: 48px;
+  background: #222;
+  border-radius: 50%;
+  animation: blink 5s infinite alternate;
+}
+
+.cheeks {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 20px;
+}
+
+.cheek {
+  width: 40px;
+  height: 32px;
+  background: pink;
+  border-radius: 50%;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes blink {
+  0%,
+  96%,
+  100% {
+    transform: scaleY(1);
+  }
+
+  98% {
+    transform: scaleY(0.1);
+  }
+}
